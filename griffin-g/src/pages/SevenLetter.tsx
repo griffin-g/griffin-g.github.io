@@ -8,7 +8,7 @@ import {
 } from '../utils/WordHelper';
 import '../App.css';
 
-function SpellBee() {
+function SevenLetter() {
     const [message, setMessage] = useState('');
     const [letters, setLetters] = useState<string[]>([]);
     const [words, setWords] = useState<string[]>([]);
@@ -39,7 +39,7 @@ function SpellBee() {
         startNewGame();
     }, []);
 
-    // shuffle letters except for the first - required letter
+    // shuffle letters except for the first -> required letter
     const scrambleLetters = () => {
         if (letters.length <= 1) return;
 
@@ -129,4 +129,4 @@ function SpellBee() {
     );
 }
 
-export default SpellBee;
+export default SevenLetter;
