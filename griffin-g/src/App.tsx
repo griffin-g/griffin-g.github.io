@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import SpellBee from './pages/SpellBee';
-
+import LongWord from './pages/LongWord';
 // router app
 
 function App() {
@@ -12,7 +12,9 @@ function App() {
             <h1 className="h4 m-0">Web Stuff</h1>
             <nav>
               <Link to="/" className="text-info me-3">Home</Link>
-              <Link to="/spellingBee" className="text-info">Spelling Bee</Link>
+              <Link to="/spellingBee" className="text-info me-3">Spelling Bee</Link>
+              <Link to="/longWord" className="text-info me-3">Long Word</Link>
+
             </nav>
           </div>
         </header>
@@ -21,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<p>Welcome!</p>} />
             <Route path="/spellingBee" element={<SpellBee />} />
+            <Route path="/longWord" element={<LongWord />} />
           </Routes>
         </main>
       </div>

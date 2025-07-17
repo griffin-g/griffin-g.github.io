@@ -4,6 +4,7 @@ import {
     generateRandomLetters,
     findWordList,
     loadWordList,
+    scrambleLetterList
 } from '../utils/WordHelper';
 import '../App.css';
 
@@ -37,6 +38,16 @@ function SpellBee() {
     useEffect(() => {
         startNewGame();
     }, []);
+
+    // shuffle letters except for the first - required letter
+    const scrambleLetters = () => {
+        if (letters.length <= 1) return;
+
+        const required = letters[0];
+        const rest = letters.slice(1);
+        const scrambled = scrambleLetterList(rest);
+        setLetters([required, ...scrambled]);
+    };
 
     const showHint = () => {
         const remaining = words.filter(w => !guessedWords.includes(w));
@@ -79,6 +90,7 @@ function SpellBee() {
 
             <div className="mb-3">
                 <p><strong>Use these letters:</strong> <span className="text">{letters.join(', ')}</span></p>
+                <button className="btn btn-secondary mb-3" onClick={scrambleLetters}>Scramble Letters</button>
                 <p>The letter <strong>{letters[0]}</strong> is required in your word</p>
             </div>
 

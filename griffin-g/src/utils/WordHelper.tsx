@@ -29,6 +29,34 @@ export const findWordList = (letters: string[], words: string[]): string[] => {
   );
 };
 
+// search for a word of length > 7
+// return random long word
+export function getLongWord(words: string[]): string {
+  const longWords = words.filter(word => word.length >= 7);
+  const randomElement = Math.floor(Math.random() * longWords.length);
+  return longWords[randomElement];
+}
+
+export function getLongWordLetters(word: string): string[] {
+    const uniqueLetters = Array.from(new Set(word.split('')));
+
+    for (let i = uniqueLetters.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [uniqueLetters[i], uniqueLetters[j]] = [uniqueLetters[j], uniqueLetters[i]];
+    }
+
+    return uniqueLetters;
+}
+
+export function scrambleLetterList(letters: string[]): string[] {
+    const shuffled = [...letters];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
 export function getHintFromWord(word: string): string {
   const visible = Math.floor(word.length / 3);
   const indexes = new Set<number>();
