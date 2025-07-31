@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="bg-dark text-white fixed-top">
-      <nav className="navbar navbar-expand-md navbar-dark container">
-        <h1 className="navbar-brand h4 m-0">Web Stuff</h1>
+      <nav className="navbar navbar-expand-md navbar-dark container-fluid">
+        <h1 className="navbar-brand h4 m-0 ms-3">Web Stuff</h1>
 
         <button
           className="navbar-toggler"
@@ -24,10 +24,13 @@ function Header() {
               <Link to="/" className="nav-link text-info">Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/sevenLetter" className="nav-link text-info">Seven Letter</Link>
+              <Link to="/sevenLetter" className="nav-link text-info">Seven Letters</Link>
             </li>
             <li className="nav-item">
               <Link to="/longWord" className="nav-link text-info">Long Word</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/endecoder" className="nav-link text-info">Converter</Link>
             </li>
           </ul>
         </div>

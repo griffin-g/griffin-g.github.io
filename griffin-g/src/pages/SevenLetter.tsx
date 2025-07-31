@@ -84,7 +84,7 @@ function SevenLetter() {
     return (
         <div className="container mt-5">
             <div className="d-flex justify-content-between align-items-center mb-3">
-                <h2>Spelling Bee</h2>
+                <h2>Seven Letters</h2>
                 <button className="btn btn-primary" onClick={startNewGame}>New Game</button>
             </div>
 
