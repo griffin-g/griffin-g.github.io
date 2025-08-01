@@ -3,6 +3,7 @@ import Header from './components/Header';
 import SevenLetter from './pages/SevenLetter';
 import LongWord from './pages/LongWord';
 import EnDecoder from './pages/EnDecoder';
+import ResistorChart from './pages/Resistors';
 // router app
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <Route path="/sevenLetter" element={<SevenLetter />} />
             <Route path="/longWord" element={<LongWord />} />
             <Route path="/endecoder" element={<EnDecoder />} />
-
+            <Route path="/resistors" element={<ResistorChart />} />
           </Routes>
         </main>
     </Router>

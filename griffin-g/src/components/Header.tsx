@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 function Header() {
   return (
     <header className="bg-dark text-white fixed-top">
@@ -17,7 +16,7 @@ function Header() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
+        
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
@@ -31,6 +30,9 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link to="/endecoder" className="nav-link text-info">Converter</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/resistors" className="nav-link text-info">Resistors</Link>
             </li>
           </ul>
         </div>
